@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gold Price Prediction Result</h1>
+        </header>
+        <main>
+            <p>Predicted Gold Price on {{ year }}-{{ '{:02d}'.format(month) }}-{{ '{:02d}'.format(day) }}: ₹{{ "{:.2f}".format(price) }}</p>
+            <a href="/" class="btn">Make another prediction</a>
+        </main>
+    </div>
+</body>
+</html>
